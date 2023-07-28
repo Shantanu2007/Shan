@@ -1,0 +1,3031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++</title>
+    <link rel="icon" type="image/jpeg" href="com.jpg">
+</head>
+<style>
+    p{
+        margin: 5px;
+        font-size: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color:rgb(36, 141, 42);
+    }
+    h1{
+        font-size: 200%;
+        font-family: Arial, Helvetica, sans-serif;
+        color:blueviolet;
+    }
+    div {
+  border: 1px solid black;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right: 100px;
+  margin-left: 50px;
+  background-color: lightblue;
+  color:aqua
+}
+.ab{
+  text-align: center;
+  background-image: url("https://images.unsplash.com/photo-1524169220946-12efd782aab4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXRodW1ibmFpbHx8MTg5MzkyN3x8ZW58MHx8fHw%3D&auto=format&fit=crop&w=420&q=60");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+
+}
+</style>
+<body>
+  <div class="ab">
+    <h2 style="font-size: 400%;">C++ programming</h2>
+    </div>
+    <h1>Introduction:</h1>
+    <div><p>
+What is C++?<br>
+C++ is a cross-platform language that can be used to create high-performance applications.<br>
+C++ was developed by Bjarne Stroustrup, as an extension to the C language.<br>
+C++ gives programmers a high level of control over system resources and memory.<br>
+The language was updated 4 major times in 2011, 2014, 2017, and 2020 to C++11, C++14, C++17, C++20.<br>
+<br>
+Why Use C++<br>
+C++ is one of the world's most popular programming languages.<br>
+C++ can be found in today's operating systems, Graphical User Interfaces, and embedded systems.<br>
+C++ is an object-oriented programming language which gives a clear structure to programs and<br>
+allows code to be reused, lowering development costs.<br>
+C++ is portable and can be used to develop applications that can be adapted to multiple platforms.<br>
+C++ is fun and easy to learn!<br>
+As C++ is close to C, C# and Java, it makes it easy for programmers to switch to C++ or vice versa.<br>
+<br>
+Difference between C and C++<br>
+C++ was developed as an extension of C, and both languages have almost the same syntax.<br>
+The main difference between C and C++ is that C++ support classes and objects, while C does not.<br>
+    </p></div>
+    <h1>C++ Syntax</h1>
+    <div><p>
+    Example explained<br>
+    Line 1: #include < iostream > is a header file library that lets us work with input and <br>
+    output objects, such as cout (used in line 5). Header files add functionality to C++ programs.<br>
+        
+    Line 2: using namespace std means that we can use names for objects and variables from the standard library.<br>
+        
+    Don't worry if you don't understand how #include <iostream> and using namespace std works.<br>
+    Just think of it as something that (almost) always appears in your program.<br>
+        
+    Line 3: A blank line. C++ ignores white space. But we use it to make the code more readable.<br>
+        
+    Line 4: Another thing that always appear in a C++ program, is int main(). This is called a function.<br>
+    Any code inside its curly brackets {} will be executed.<br>
+        
+    Line 5: cout (pronounced "see-out") is an object used together with the insertion operator (<<) to output/print text.<br>
+    In our example it will output "Hello World".<br>
+        
+    Note: Every C++ statement ends with a semicolon ;.<br>
+        
+    Note: The body of int main() could also been written as:<br>
+    int main () { cout << "Hello World! "; return 0; }<br>
+    <br>
+    Remember: The compiler ignores white spaces. However, multiple lines makes the code more readable.<br>
+    <br>
+    Line 6: return 0 ends the main function.<br>
+        
+    Line 7: Do not forget to add the closing curly bracket } to actually end the main function.<br>
+        
+        </p></div>
+        <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+            #include < iostream >
+                using namespace std;
+                
+                int main() {
+                  cout << "Hello World!";
+                  return 0;
+                }
+                output:Hello World!
+        </pre>
+    <hr>
+    <div><p>
+Omitting Namespace<br>
+You might see some C++ programs that runs without the standard namespace library.<br>
+The using namespace std line can be omitted and replaced with the std keyword, followed by the :: operator for some objects:
+    </p></div>
+    <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+        #include < iostream >
+
+            int main() {
+              std::cout << "Hello World!";
+              return 0;
+            }
+            output:Hello World!
+            
+    </pre>
+    <hr>
+    <h1>C++ Output (Print Text):</h1>
+    <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+    The cout object, together with the << operator, is used to output values/print text:
+
+    Example
+    #include < iostream >
+        using namespace std;
+        
+        int main() {
+          cout << "Hello World!";
+          return 0;
+        }
+        output:Hello World!
+        <hr>
+        You can add as many <mark>cout</mark> objects as you want. However, note that it does not insert a new line at the end of the output:
+
+        Example
+        #include < iostream >
+            using namespace std;
+            
+            int main() {
+              cout << "Hello World!";
+              cout << "I am learning C++";
+              return 0;
+            }
+            output:Hello World!I am learning C++
+            <hr>
+    New Lines
+   To insert a new line, you can use the \n character:
+
+    Example
+    #include < iostream >
+        using namespace std;
+        
+        int main() {
+          cout << "Hello World! \n";
+          cout << "I am learning C++";
+          return 0;
+        }
+        output:Hello World!
+        I am learning C++
+        <hr>
+    Another way to insert a new line, is with the endl manipulator:
+
+    Example
+    #include < iostream >
+    using namespace std;
+
+    int main() {
+    cout << "Hello World!" << endl;
+    cout << "I am learning C++";
+    return 0;
+    }
+    output:Hello World!
+    <hr>
+    I am learning C++      
+    Both \n and endl are used to break lines. However, \n is most used.
+
+   But what is \n exactly?
+   The newline character (\n) is called an escape sequence, and it forces the cursor to change its position to the beginning of the next line on the screen. This results in a new line.
+
+   Examples of other valid escape sequences are:
+
+   Escape Sequence	              Description
+       \t	                 Creates a horizontal tab	
+       \\	                 Inserts a backslash character (\)	
+       \"                 	 Inserts a double quote character	
+        </pre>
+        <h1>C++ Comments:</h1>
+        <div><p>
+        C++ Comments<br>
+        Comments can be used to explain C++ code, and to make it more readable.<br>
+        It can also be used to prevent execution when testing alternative code. Comments can be singled-lined or multi-lined.<br>
+            
+        Single-line Comments<br>
+        Single-line comments start with two forward slashes (//).<br>
+            
+        Any text between // and the end of the line is ignored by the compiler (will not be executed).<br>
+            
+        This example uses a single-line comment before a line of code:</p></div>
+<hr>
+        <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+            #include < iostream >
+                using namespace std;
+                
+                int main() {
+                  // This is a comment
+                  cout << "Hello World!";
+                  return 0;
+                }
+            output:Hello World!
+            <hr>    
+        C++ Multi-line Comments
+        Multi-line comments start with /* and ends with */.
+            
+        Any text between /* and */ will be ignored by the compiler:
+            
+        Example
+        #include < iostream >
+            using namespace std;
+            
+            int main() {
+              /* The code below will print the words Hello World!
+              to the screen, and it is amazing */  
+              cout << "Hello World!";
+              return 0;
+            }
+            output:Hello World!
+    <hr>
+    Single or multi-line comments?
+   It is up to you which you want to use. Normally, we use // for short comments, and /* */ for longer.       
+   </pre> 
+   <hr>
+   <h1>C++ Variables:</h1>
+   <div><p>
+C++ Variables<br>
+Variables are containers for storing data values.<br>
+
+In C++, there are different types of variables (defined with different keywords), for example:<br>
+<br>
+int --> stores integers (whole numbers), without decimals, such as 123 or -123<br>
+double --> stores floating point numbers, with decimals, such as 19.99 or -19.99<br>
+char --> stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes<br>
+string --> stores text, such as "Hello World". String values are surrounded by double quotes<br>
+bool --> stores values with two states: true or false<br>
+   </p></div>
+   <pre style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+    Declaring (Creating) Variables
+    To create a variable, specify the type and assign it a value:
+    
+    Syntax
+    type variableName = value;
+    Where type is one of C++ types (such as int), and variableName is the name of the variable (such as x or myName). The equal sign is used to assign values to the variable.
+    
+    To create a variable that should store a number, look at the following example:
+    <hr>
+    Example
+    Create a variable called myNum of type int and assign it the value 15:
+    
+    #include < iostream >
+        using namespace std;
+        
+        int main() {
+          int myNum = 15;
+          cout << myNum;
+          return 0;
+        }
+        output:15
+        <hr>
+        #include < iostream >
+            using namespace std;
+            
+            int main() {
+              int myNum = 15;   // Now myNum is 15
+              myNum = 10;       // Now myNum is 10
+              cout << myNum;
+              return 0;
+            }
+            output:10
+            <hr>
+C++ Declare Multiple Variables
+Declare Many Variables
+To declare more than one variable of the same type, use a comma-separated list:
+
+#include < iostream>
+    using namespace std;
+    
+    int main() {
+      int x = 5, y = 6, z = 50;  
+      cout << x + y + z;
+      return 0;
+    }
+    output:61
+    <hr>
+One Value to Multiple Variables
+You can also assign the same value to multiple variables in one line:
+
+Example
+#include < iostream >
+    using namespace std;
+    
+    int main() {
+      int x, y, z;
+      x = y = z = 50;
+      cout << x + y + z;
+      return 0;
+    }
+    output:150
+</pre>
+<hr>
+<h1>C++ Identifiers:</h1>
+<div><p>
+C++ Identifiers<br>
+All C++ variables must be identified with unique names.<br>
+    
+These unique names are called identifiers.<br>
+    
+Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).<br>
+Note: It is recommended to use descriptive names in order to create understandable and maintainable code:
+<br></p></div>
+<hr>
+<pre style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+    #include < iostream >
+        using namespace std;
+        
+        int main() {
+          // Good name
+          int minutesPerHour = 60;
+          
+          // OK, but not so easy to understand what m actually is
+          int m = 60;
+          
+          cout << minutesPerHour << "\n";
+          cout << m;
+          return 0;
+        }
+        output:60
+        60
+
+        <hr>
+The general rules for naming variables are:
+
+1.Names can contain letters, digits and underscores
+2.Names must begin with a letter or an underscore (_)
+3.Names are case sensitive (myVar and myvar are different variables)
+4.Names cannot contain whitespaces or special characters like !, #, %, etc.
+5.Reserved words (like C++ keywords, such as int) cannot be used as names
+
+<hr>
+Constants
+When you do not want others (or yourself) to override existing variable values, use the const keyword <br>
+(this will declare the variable as "constant", which means unchangeable and read-only):
+#include < iostream >
+    using namespace std;
+    
+    int main() {
+      const int minutesPerHour = 60;
+      const float PI = 3.14;
+      cout << minutesPerHour << "\n";
+      cout << PI;
+      return 0;
+    }
+    output:60
+    3.14
+    <hr>
+        </pre>
+        <h1>C++ User Input:</h1>
+        <div><p>
+You have already learned that cout is used to output (print) values. Now we will use cin to get user input.<br>
+
+cin is a predefined variable that reads data from the keyboard with the extraction operator (>>).<br>
+
+In the following example, the user can input a number, which is stored in the variable x. Then we print the value of x:<br>
+        </p></div>
+        <hr>
+        <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+            #include < iostream >
+                using namespace std;
+                
+                int main() {
+                  int x;
+                  cout << "Type a number: "; // Type a number and press enter
+                  cin >> x; // Get user input from the keyboard
+                  cout << "Your number is: " << x;
+                  return 0;
+                }
+                output:Type a number:
+            <hr>
+Good To Know
+cout is pronounced "see-out". Used for output, and uses the insertion operator (<<)
+
+cin is pronounced "see-in". Used for input, and uses the extraction operator (>>)
+
+Creating a Simple Calculator
+In this example, the user must input two numbers. Then we print the sum by calculating (adding) the two numbers:
+
+Example 
+#include < iostream >
+    using namespace std;
+    
+    int main() {
+      int x, y;
+      int sum;
+      cout << "Type a number: ";
+      cin >> x;
+      cout << "Type another number: ";
+      cin >> y;
+      sum = x + y;
+      cout << "Sum is: " << sum;
+      return 0;
+    }
+    output:Type a number: 
+    Type another number: 
+    
+    <hr>
+        </pre>
+        <h1>C++ Data Types:</h1>
+        <div><p>
+C++ Data Types<br>
+As explained in the Variables chapter, a variable in C++ must be a specified data type:<br>
+<hr>
+        </p></div>
+        <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;">
+            #include < iostream>
+                #include < string>
+                using namespace std;
+                 
+                int main () {
+                  // Creating variables
+                  int myNum = 5;               // Integer (whole number)
+                  float myFloatNum = 5.99;     // Floating point number
+                  double myDoubleNum = 9.98;   // Floating point number
+                  char myLetter = 'D';         // Character
+                  bool myBoolean = true;       // Boolean
+                  string myString = "Hello";   // String
+                   
+                  // Print variable values
+                  cout << "int: " << myNum << "\n";
+                  cout << "float: " << myFloatNum << "\n";
+                  cout << "double: " << myDoubleNum << "\n";
+                  cout << "char: " << myLetter << "\n";
+                  cout << "bool: " << myBoolean << "\n";
+                  cout << "string: " << myString << "\n";
+                 
+                  return 0;
+                }
+             output:int: 5
+             float: 5.99
+             double: 9.98
+             char: D
+             bool: 1
+             string: Hello   
+        </pre>
+        <hr>
+        <table border="5px">
+            <tr>
+                <th>Data Type</th>
+                <th>Size</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>boolean</td>
+                <td> 1 byte </td>
+                <td> Stores true or false values </td>
+            </tr>
+            <tr>
+                <td>char</td>
+                <td> 1 byte </td>
+                <td> Stores a single character/letter/number, or ASCII values </td>
+            </tr>
+            <tr>
+                <td>int</td>
+                <td> 2 or 4 bytes </td>
+                <td> Stores whole numbers, without decimals </td>
+            </tr>
+            <tr>
+                <td>float</td>
+                <td> 4 bytes </td>
+                <td> Stores fractional numbers, containing one or more decimals. Sufficient for storing 7 decimal digits </td>
+            </tr>
+            <tr>
+                <td>double</td>
+                <td> 8 bytes </td>
+                <td> Stores fractional numbers, containing one or more decimals. Sufficient for storing 15 decimal digits </td>
+            </tr>
+            <tr>
+               </table>
+               <h1>C++ Numeric Data Types:</h1>
+               <pre style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                Numeric Types
+                Use int when you need to store a whole number without decimals, like 35 or 1000, <br>
+                and float or double when you need a floating point number (with decimals), like 9.99 or 3.14515.
+                <hr>
+                #include < iostream >
+                    using namespace std;
+                     
+                    int main () {
+                      int myNum = 1000;
+                      cout << myNum;
+                      return 0;
+                    }
+                    output:1000
+                    <hr>
+float vs. double
+
+The precision of a floating point value indicates how many digits the value can have after the decimal point.
+The precision of float is only six or seven decimal digits, while double variables have a precision of about 15 digits.
+Therefore it is safer to use double for most calculations.
+
+<hr>
+#include < iostream >
+    using namespace std;
+     
+    int main () {
+      float f1 = 35e3;
+      double d1 = 12E4;
+      cout << f1 << "\n";
+      cout << d1;
+      return 0;
+    }
+    output:35000
+    120000 
+</pre>
+    <hr>
+    <h1>C++ Boolean Data Types:</h1>
+    <hr>
+    <pre style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+Boolean Types
+A boolean data type is declared with the bool keyword and can only take the values true or false.
+
+When the value is returned, true = 1 and false = 0.
+
+#include < iostream >
+    using namespace std;
+    
+    int main() {
+      bool isCodingFun = true;
+      bool isFishTasty = false;
+      cout << isCodingFun << "\n";
+      cout << isFishTasty;
+      return 0;
+    }
+    output:1
+    0
+    <hr>
+    
+    </pre>    
+    <h1>C++ Character Data Types:</h1>
+    <div><P>
+Character Types<br>
+The char data type is used to store a single character. The character must be surrounded by single quotes, like 'A' or 'c':<br>
+    </P></div>
+    <hr>
+    <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+        #include < iostream>
+            using namespace std;
+             
+            int main () {
+              char myGrade = 'B';
+              cout << myGrade;
+              return 0;
+            }
+            output:B
+  <hr>
+  #include < iostream >
+    using namespace std;
+     
+    int main () {
+      char a = 65, b = 66, c = 67;
+      cout << a;
+      cout << b;
+      cout << c;
+      return 0;
+    }
+    output:ABC
+    <hr>      
+    </pre>
+    <h1>C++ String Data Types:    </h1>
+    <div><p>
+    String Types<br>
+    The string type is used to store a sequence of characters (text).<br>
+    This is not a built-in type, but it behaves like one in its most basic usage.<br>
+    String values must be surrounded by double quotes:</p></div>
+    <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;">
+        #include < iostream>
+            #include < string>
+            using namespace std;
+            
+            int main() {
+              string greeting = "Hello";
+              cout << greeting;
+              return 0;
+            }
+            output:Hello
+            <hr>
+    Although the + operator is often used to add together two values, like in the example above,<br>
+    also be used to add together a variable and a value, or a variable and another variable:
+
+    #include < iostream >
+        using namespace std;
+        
+        int main() {
+          int sum1 = 100 + 50;        // 150 (100 + 50)
+          int sum2 = sum1 + 250;      // 400 (150 + 250)
+          int sum3 = sum2 + sum2;     // 800 (400 + 400)
+          cout << sum1 << "\n";
+          cout << sum2 << "\n";
+          cout << sum3;
+          return 0;
+        }
+        output:150
+        400
+        800
+        <hr>
+
+C++ divides the operators into the following groups:
+
+1.Arithmetic operators
+2.Assignment operators
+3.Comparison operators
+4.Logical operators
+5.Bitwise operators        
+    </pre>
+    <hr>
+    <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;">
+    Arithmetic Operators
+    Arithmetic operators are used to perform common mathematical operations.
+    </pre>
+
+    <table border="5px">
+        <tr>
+            <th> Operator </th>
+            <th> Name </th>
+            <th> Description </th>
+            <th> Example </th>
+        </tr>
+        <tr>
+            <td>+</td>
+            <td> Addition </td>
+            <td>  Adds together two values  </td>
+            <td> x + y </td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td> Subtraction </td>
+            <td>  Subtracts one value from another  </td>
+            <td>x - y</td>
+        </tr>
+        <tr>
+            <td>*</td>
+            <td> Multiplication </td>
+            <td>  Multiplies two values  </td>
+            <td>x * y</td>
+        </tr>
+        <tr>
+            <td>/</td>
+            <td> Division </td>
+            <td>  Divides one value by another  </td>
+            <td>x / y</td>
+        </tr>
+        <tr>
+            <td>%</td>
+            <td> Modulus </td>
+            <td>  Returns the division remainder  </td>
+            <td>x % y</td>
+        </tr>
+        <tr>
+            <td>++</td>
+            <td> Increment </td>
+            <td>  Increases the value of a variable by 1  </td>
+            <td>++x</td>
+        </tr>
+        <tr>
+            <td>--</td>
+            <td> Decrement </td>
+            <td>  Decreases the value of a variable by 1  </td>
+            <td>--x</td>
+        </tr>
+    </table>
+                <hr>
+        <h1>C++ Assignment Operators:</h1>
+        <div><p>
+Assignment Operators<br>
+Assignment operators are used to assign values to variables.<br>
+
+In the example below, we use the assignment operator (=) to assign the value 10 to a variable called x:<br>
+        </p></div>    
+        <hr>
+        <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+          #include < iostream >
+            using namespace std;
+            
+            int main() {
+              int x = 10;
+              x += 5;
+              cout << x;
+              return 0;
+            }
+            output:15
+        </pre>
+        <hr>
+        <table border="5px" >
+          <tr>
+              <th> Operator </th>
+              <th> Example </th>
+              <th> Same as </th>
+          </tr>
+          <tr>
+              <td>   =  </td>
+              <td> x = 5 </td>
+              <td>  x = 5  </td>
+          </tr>
+          <tr>
+              <td>+=</td>
+              <td> x += 3 </td>
+              <td>  x = x + 3	</td>
+          </tr>
+          <tr>
+              <td>-=</td>
+              <td> x -= 3 </td>
+              <td>  x = x - 3  </td>
+          </tr>
+          <tr>
+              <td>*=</td>
+              <td> x *= 3 </td>
+              <td>  x = x * 3  </td>
+          </tr>
+          <tr>
+              <td>/=</td>
+              <td> x /= 3 </td>
+              <td>  x = x / 3 </td>
+              
+          </tr>
+          <tr>
+              <td>%=</td>
+              <td> x %= 3 </td>
+              <td> x = x % 3  </td>
+              
+          </tr>
+          <tr>
+              <td>&=</td>
+              <td> x &= 3 </td>
+              <td>  x = x & 3  </td>
+            
+          </tr>
+          <tr>
+            <td>|=</td>
+            <td> x |= 3 </td>
+            <td>  x = x | 3  </td>
+        </tr>
+        <tr>
+            <td>^=</td>
+            <td> x ^= 3 </td>
+            <td>  	x = x ^ 3 </td>
+            
+        </tr>
+        <tr>
+            <td>>>=</td>
+            <td> 	x >>= 3 </td>
+            <td> 	x = x >> 3  </td>
+            
+        </tr>
+        <tr>
+            <td><<=</td>
+            <td> x <<= 3 </td>
+            <td>  x = x << 3  </td>
+          
+        </tr>
+      </table>
+                  <hr>
+                  <h1>C++ Comparison Operators</h1>
+                  <div><p>
+                    Comparison Operators<br>
+                    Comparison operators are used to compare two values.<br>
+                    
+                    Note: The return value of a comparison is either true (1) or false (0).<br>
+                    
+                    In the following example, we use the greater than operator (>) to find out if 5 is greater than 3:</p></div>
+                    <hr>
+                    <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                      #include < iostream >
+                        using namespace std;
+                        
+                        int main() {
+                          int x = 5;
+                          int y = 3;
+                          cout << (x > y); // returns 1 (true) because 5 is greater than 3
+                          return 0;
+                        }
+                       output: 1 
+                    </pre>
+                <hr>
+                <table border="5px">
+                  <tr>
+                      <th>Operator</th>
+                      <th> Name </th>
+                      <th> Example </th>
+                  </tr>
+                  <tr>
+                      <td>==</td>
+                      <td>  Equal to  </td>
+                      <td> x == y </td>
+                  </tr>
+                  <tr>
+                      <td>!=</td>
+                      <td>  Not equal  </td>
+                      <td> x != y </td>
+                  </tr>
+                  <tr>
+                      <td>></td>
+                      <td>  Greater than  </td>
+                      <td> x > y </td>
+                  </tr>
+                  <tr>
+                      <td><</td>
+                      <td>  Less than  </td>
+                      <td> x < y </td>
+                  </tr>
+                  <tr>
+                      <td>>=</td>
+                      <td>  Greater than or equal to  </td>
+                      <td>  x >= y  </td>
+                  </tr>
+                  <tr>
+                      <td><=</td>
+                      <td>  Less than or equal to  </td>
+                      <td> x <= y </td>
+                  </tr>
+                  </table>
+                  <hr>
+                  <h1>C++ Logical Operators:</h1>
+                  <div><p>
+Logical Operators<br>
+Logical operators are used to determine the logic between variables or values:<br>
+                  </p></div>
+                  <table border="5px">
+                    <tr>
+                        <th>Operator</th>
+                        <th> Name </th>
+                        <th> Description</th>
+                        <th> Example </th>
+                    </tr>
+                    <tr>
+                        <td>&&</td>
+                        <td>  Logical and  </td>
+                        <td> Returns true if both statements are true  </td>
+                        <td> x < 5 &&  x < 10 </td>
+                    </tr>
+                    <tr>
+                        <td>||</td>
+                        <td>  Logical or  </td>
+                        <td> Returns true if one of the statements is true </td>
+                        <td> x < 5 || x < 4 </td>
+                    </tr>
+                    <tr>
+                        <td>!</td>
+                        <td>  Logical not  </td>
+                        <td> Reverse the result, returns false if the result is true </td>
+                        <td> !(x < 5 && x < 10) </td>
+                    </tr>
+                    </table>
+                    <h1>C++ Strings:</h1>
+                    <div><p>
+Strings are used for storing text.<br>
+
+A string variable contains a collection of characters surrounded by double quotes:<br>
+                    </p></div>
+                    <hr>
+                    <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+                      #include < iostream >
+                        #include < string >
+                        using namespace std;
+                        
+                        int main() {
+                          string greeting = "Hello";
+                          cout << greeting;
+                          return 0;
+                        }
+                        output: Hello
+                        </pre>
+                        <hr>
+                        <h1>C++ String Concatenation: </h1>
+                        <div><p>
+String Concatenation<br>
+The + operator can be used between strings to add them together to make a new string. This is called concatenation:<br>
+                        </p></div>
+                        <hr>
+                        <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+                          #include < iostream >
+                            #include < string >
+                            using namespace std;
+                             
+                            int main () {
+                              string firstName = "Shantanu";
+                              string lastName = "Shinde";
+                              string fullName = firstName + " " + lastName;
+                              cout << fullName;
+                              return 0;
+                            }
+                            output: Shantanu Shinde
+
+                            <hr>
+                            <mark>Append</mark>
+A string in C++ is actually an object, which contain functions that can perform certain operations on strings.<br>
+ For example, you can also concatenate strings with the append() function:
+                           #include < iostream >
+                            #include < string >
+                            using namespace std;
+   
+                            int main () {
+                              string firstName = "Shantanu ";
+                              string lastName = "Shinde";
+                              string fullName = firstName.append(lastName);
+                              cout << fullName;
+                              return 0;
+                            }
+                            output:Shantanu Shinde
+  
+                            <hr>
+                            <mark>C++ Numbers and Strings</mark>
+Adding Numbers and Strings
+WARNING!
+
+C++ uses the + operator for both addition and concatenation.
+
+Numbers are added. Strings are concatenated.
+
+If you add two numbers, the result will be a number:
+
+<hr>
+#include < iostream >
+  using namespace std;
+   
+  int main () {
+    int x = 10;
+    int y = 20;
+    int z = x + y;
+    cout << z;
+    return 0;
+  }
+  output: 30
+  <hr>
+
+If you try to add a number to a string, an error occurs:
+
+Example
+string x = "10";
+int y = 20;
+string z = x + y;
+                            </pre>
+
+<h1>C++ String Length:</h1>
+<div><p>
+String Length<br>
+To get the length of a string, use the length() function:<br>
+</p></div>                          
+<hr>
+<pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+  #include < iostream >
+    #include < string >
+    using namespace std;
+    
+    int main() {
+      string txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      cout << "The length of the txt string is: " << txt.length();
+      return 0;
+    }
+    output: 26
+
+
+    <hr>
+C++ Access Strings:
+Access Strings
+You can access the characters in a string by referring to its index number inside square brackets [].
+
+This example prints the first character in myString:
+<hr>
+Example:
+#include < iostream >
+  #include < string >
+  using namespace std;
+  
+  int main() {
+    string myString = "Hello";
+    cout << myString[0];
+    return 0;
+  }
+  output: H
+  <hr>
+
+Change String Characters
+To change the value of a specific character in a string, refer to the index number, and use single quotes:
+#include < iostream >
+  #include < string >
+  using namespace std;
+  
+  int main() {
+    string myString = "Hello";
+    myString[0] = 'J';
+    cout << myString;
+    return 0;
+  }
+  output: Jello
+  
+  <hr>
+  C++ Special Characters
+Strings - Special Characters
+Because strings must be written within quotes, C++ will misunderstand this string, and generate an error:
+
+string txt = "We are the so-called "Vikings" from the north.";
+The solution to avoid this problem, is to use the backslash escape character.
+
+The backslash (\) escape character turns special characters into string characters:
+Escape character	Result	        Description
+\'	                '	            Single quote
+\"	                "              Double quote
+\\	                \	              Backslash
+
+<hr>
+C++ User Input Strings
+User Input Strings
+It is possible to use the extraction operator >> on cin to display a string entered by a user:
+
+Example:
+string firstName;
+cout << "Type your first name: ";
+cin >> firstName; // get user input from the keyboard
+cout << "Your name is: " << firstName;
+
+// Type your first name: John
+// Your name is: John
+However, cin considers a space (whitespace, tabs, etc) as a terminating character, which means that it 
+can only display a single word (even if you type many words):
+
+Example
+string fullName;
+cout << "Type your full name: ";
+cin >> fullName;
+cout << "Your name is: " << fullName;
+
+// Type your full name: John Doe
+// Your name is: John
+From the example above, you would expect the program to print "John Doe", but it only prints "John".
+
+That's why, when working with strings, we often use the getline() function to read a line of text.
+It takes cin as the first parameter, and the string variable as second:
+
+Example:
+#include < iostream >
+  #include < string >
+  using namespace std;
+  
+  int main() {
+    string fullName;
+    cout << "Type your full name: ";
+    getline (cin, fullName);
+    cout << "Your name is: " << fullName;
+    return 0;
+  }
+  output:  Type your full name: 
+  
+  <hr>
+
+C++ String Namespace
+Omitting Namespace
+You might see some C++ programs that runs without the standard namespace library. The using namespace std line can be omitted and replaced with the std keyword, followed by the :: operator for string (and cout) objects:
+
+Example:
+#include <iostream>
+  #include <string>
+  
+  int main() {
+    std::string greeting = "Hello";
+    std::cout << greeting;
+    return 0;
+  }
+output: Hello
+
+<hr>
+</pre>
+<h1>C++ Math: </h1>
+<hr>
+<pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+  Max and min
+  The max(x,y) function can be used to find the highest value of x and y:
+  
+  Example:
+  #include < iostream >
+    using namespace std;
+    
+    int main() {
+      cout << max(5, 10);
+      return 0;
+    }
+    output: 10
+
+    <hr>
+    C++ < cmath > Header
+    Other functions, such as sqrt (square root), round (rounds a number) and log (natural logarithm), 
+    can be found in the <cmath> header file:
+      
+    Example:
+    #include < iostream >
+      #include < cmath >
+      using namespace std;
+      
+      int main() {
+        cout << sqrt(64) << "\n";
+        cout << round(2.6) << "\n";
+        cout << log(2) << "\n";
+        return 0;
+      }
+      output:8
+      3
+      0.693147
+      <hr>
+
+
+Other Math Functions
+A list of other popular Math functions (from the < cmath > library) can be found in the table below:
+
+Function	      Description
+abs(x)	        Returns the absolute value of x
+acos(x)	        Returns the arccosine of x
+asin(x)	        Returns the arcsine of x
+atan(x)	        Returns the arctangent of x
+cbrt(x)	        Returns the cube root of x
+ceil(x)	        Returns the value of x rounded up to its nearest integer
+cos(x)	        Returns the cosine of x
+cosh(x)	        Returns the hyperbolic cosine of x
+exp(x)	        Returns the value of Ex
+expm1(x)	      Returns ex -1
+fabs(x)	        Returns the absolute value of a floating x
+fdim(x, y)	    Returns the positive difference between x and y
+floor(x)	      Returns the value of x rounded down to its nearest integer
+hypot(x, y)	    Returns sqrt(x2 +y2) without intermediate overflow or underflow
+fma(x, y, z)	  Returns x*y+z without losing precision
+fmax(x, y)	    Returns the highest value of a floating x and y
+fmin(x, y)	    Returns the lowest value of a floating x and y
+fmod(x, y)	    Returns the floating point remainder of x/y
+pow(x, y)	      Returns the value of x to the power of y
+sin(x)	        Returns the sine of x (x is in radians)
+sinh(x)        	Returns the hyperbolic sine of a double value
+tan(x)         	Returns the tangent of an angle
+tanh(x)	        Returns the hyperbolic tangent of a double value
+      
+    </pre>
+    <hr>
+
+    <h1>C++ Booleans:</h1>
+    <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+      C++ Booleans
+      Very often, in programming, you will need a data type that can only have one of two values, like:
+      
+      YES / NO
+      ON / OFF
+      TRUE / FALSE
+      For this, C++ has a bool data type, which can take the values true (1) or false (0).
+      
+      Boolean Values
+      A boolean variable is declared with the bool keyword and can only take the values true or false:
+     
+    output: 1
+            0
+
+            <hr>
+    C++ Boolean Expressions:
+Boolean Expression
+A Boolean expression is a C++ expression that returns a boolean value: 1 (true) or 0 (false).
+
+You can use a comparison operator, such as the greater than (>) operator to find out if an expression (or a variable) is true:
+<hr>
+#include < iostream >
+  using namespace std;
+  
+  int main() {
+    int x = 10;
+    int y = 9;
+    cout << (x > y);
+    return 0;
+  }
+  output: 1
+  <hr>
+
+  #include < iostream >
+    using namespace std;
+    
+    int main() {
+      int x = 10;
+      cout << (x == 10);
+      return 0;
+    }
+    output: 1
+    
+          </pre>
+          <h1>C++ If ... Else:</h1>
+          <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+            C++ Conditions and If Statements
+            C++ supports the usual logical conditions from mathematics:
+            
+            Less than: a < b
+            Less than or equal to: a <= b
+            Greater than: a > b
+            Greater than or equal to: a >= b
+            Equal to a == b
+            Not Equal to: a != b
+            You can use these conditions to perform different actions for different decisions.
+            
+            C++ has the following conditional statements:
+            
+            Use if to specify a block of code to be executed, if a specified condition is true
+            Use else to specify a block of code to be executed, if the same condition is false
+            Use else if to specify a new condition to test, if the first condition is false
+            Use switch to specify many alternative blocks of code to be executed
+
+
+
+            The if Statement
+            Use the if statement to specify a block of C++ code to be executed if a condition is true.
+            
+            Syntax
+            if (condition) {
+              // block of code to be executed if the condition is true
+            }
+            Note that if is in lowercase letters. Uppercase letters (If or IF) will generate an error.
+            
+            In the example below, we test two values to find out if 20 is greater than 18. If the condition is true, print some text:
+
+            <hr>
+            #include < iostream >
+              using namespace std;
+              
+              int main() {
+                int x = 20;
+                int y = 18;
+                if (x > y) {
+                  cout << "x is greater than y";
+                }  
+                return 0;
+              }
+              output: x is greater than y
+              
+              <hr>
+
+<mark>C++ Else</mark>
+
+The else Statement
+Use the else statement to specify a block of code to be executed if the condition is false.
+
+Syntax
+if (condition) {
+  // block of code to be executed if the condition is true
+} else {
+  // block of code to be executed if the condition is false
+}
+
+#include < iostream >
+  using namespace std;
+  
+  int main() {
+    int time = 20;
+    if (time < 18) {
+      cout << "Good day.";
+    } else {
+      cout << "Good evening.";
+    }
+    return 0;
+  }
+  output: Good evening.
+  
+  <hr>
+  <mark>C++ Else If:</mark>
+The else if Statement
+Use the else if statement to specify a new condition if the first condition is false.
+
+Syntax
+if (condition1) {
+  // block of code to be executed if condition1 is true
+} else if (condition2) {
+  // block of code to be executed if the condition1 is false and condition2 is true
+} else {
+  // block of code to be executed if the condition1 is false and condition2 is false
+}
+<hr>
+#include < iostream >
+  using namespace std;
+  
+  int main() {
+    int time = 22;
+    if (time < 10) {
+      cout << "Good morning.";
+    } else if (time < 20) {
+      cout << "Good day.";
+    } else {
+      cout << "Good evening.";
+    }
+    return 0;
+  }
+  output:Good evening.
+  
+  <hr>
+  <mark>C++ Short Hand If Else:</mark>
+Short Hand If...Else (Ternary Operator)
+There is also a short-hand if else, which is known as the ternary operator because it consists of three operands.
+It can be used to replace multiple lines of code with a single line. It is often used to replace simple if else statements:
+
+Syntax
+variable = (condition) ? expressionTrue : expressionFalse;
+Instead of writing:
+
+
+#include < iostream >
+  using namespace std;
+  
+  int main() {
+    int time = 20;
+    if (time < 18) {
+      cout << "Good day.";
+    } else {
+      cout << "Good evening.";
+    }
+    return 0;
+  }
+  output:Good evening.
+
+  <hr>
+  You can simply write:
+  <hr>
+  #include < iostream >
+    #include < string >
+    using namespace std;
+    
+    int main() {
+      int time = 20;
+      string result = (time < 18) ? "Good day." : "Good evening.";
+      cout << result;
+      return 0;
+    }
+    output:Good evening.
+    
+  <hr>
+            </pre>
+            <h1>C++ Switch:</h1>
+            <div><p>
+              C++ Switch Statements<br>
+Use the switch statement to select one of many code blocks to be executed.<br>
+<br>
+Syntax<br>
+switch(expression) {<br>
+  case x:<br>
+    // code block<br>
+    break;<br>
+  case y:<br>
+    // code block<br>
+    break;<br>
+  default:<br>
+    // code block<br>
+}<br>
+This is how it works:<br>
+<br>
+The switch expression is evaluated once<br>
+The value of the expression is compared with the values of each case<br>
+If there is a match, the associated block of code is executed<br>
+The break and default keywords are optional, and will be described later in this chapter<br>
+The example below uses the weekday number to calculate the weekday name:<br>
+            </p></div>
+            <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+              #include < iostream >
+                using namespace std;
+                
+                int main() {
+                  int day = 4;
+                  switch (day) {
+                  case 1:
+                    cout << "Monday";
+                    break;
+                  case 2:
+                    cout << "Tuesday";
+                    break;
+                  case 3:
+                    cout << "Wednesday";
+                    break;
+                  case 4:
+                    cout << "Thursday";
+                    break;
+                  case 5:
+                    cout << "Friday";
+                    break;
+                  case 6:
+                    cout << "Saturday";
+                    break;
+                  case 7:
+                    cout << "Sunday";
+                    break;
+                  }
+                  return 0;
+                }
+                output: Thursday
+
+                <hr>
+
+The break Keyword
+When C++ reaches a break keyword, it breaks out of the switch block.
+
+This will stop the execution of more code and case testing inside the block.
+
+When a match is found, and the job is done, it's time for a break. There is no need for more testing.
+
+A break can save a lot of execution time because it "ignores" the execution of all the rest of the code in the switch block.
+
+The default Keyword
+The default keyword specifies some code to run if there is no case match:
+
+#include  < iostream >
+  using namespace std;
+  
+  int main() {
+    int day = 4;
+    switch (day) {
+      case 6:
+        cout << "Today is Saturday";
+        break;
+      case 7:
+        cout << "Today is Sunday";
+        break;
+      default:
+        cout << "Looking forward to the Weekend";
+    }
+    return 0;
+  }
+  output:Looking forward to the Weekend
+  
+ <hr>
+                </pre>
+
+                <h1>C++ While Loop:</h1>
+                <div><p>
+C++ Loops<br>
+Loops can execute a block of code as long as a specified condition is reached.<br>
+<br>
+Loops are handy because they save time, reduce errors, and they make code more readable.<br>
+<br>
+C++ While Loop<br>
+The while loop loops through a block of code as long as a specified condition is true:<br>
+<br>
+Syntax<br>
+while (condition) {<br>
+  // code block to be executed<br>
+}<br>
+<hr>
+</p></div>
+  <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+  
+#include < iostream >
+using namespace std;
+
+int main() {
+  int i = 0;
+  while (i < 5) {
+    cout << i << "\n";
+    i++;
+  }
+  return 0;
+}
+output:0
+1
+2
+3
+4
+
+</pre>
+<hr>
+  <h1>C++ Do/While Loop:</h1>
+  <div><p>
+The Do/While Loop<br>
+The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true,<br>
+then it will repeat the loop as long as the condition is true.<br>
+<br>
+Syntax<br>
+do {<br>
+  // code block to be executed<br>
+}<br>
+while (condition);<br>
+The example below uses a do/while loop. The loop will always be executed at least once, even if the condition is false,<br>
+because the code block is executed before the condition is tested:<br>
+<hr>
+  </p></div>
+  <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+    #include < iostream >
+      using namespace std;
+      
+      int main() {
+        int i = 0;
+        do {
+          cout << i << "\n";
+          i++;
+        }
+        while (i < 5);
+        return 0;
+      }
+      output:0
+      1
+      2
+      3
+      4
+      <hr>
+    </pre>
+      <h1>C++ For Loop:</h1>
+      <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+C++ For Loop
+When you know exactly how many times you want to loop through a block of code, use the for loop instead of a while loop:
+
+Syntax
+for (statement 1; statement 2; statement 3) {
+  // code block to be executed
+}
+Statement 1 is executed (one time) before the execution of the code block.
+
+Statement 2 defines the condition for executing the code block.
+
+Statement 3 is executed (every time) after the code block has been executed.
+
+The example below will print the numbers 0 to 4:
+
+#include < iostream >
+  using namespace std;
+  
+  int main() {
+    for (int i = 0; i < 5; i++) {
+      cout << i << "\n";
+    }
+    return 0;
+  }
+  output: 0
+  1
+  2
+  3
+  4
+  
+  <hr>
+
+      </pre>
+      <h1>C++ Break and Continue:</h1>
+      <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+        C++ Break
+        You have already seen the break statement used in an earlier chapter of this tutorial. It was used to "jump out" of a switch statement.
+        
+        The break statement can also be used to jump out of a loop.
+        
+        This example jumps out of the loop when i is equal to 4:
+
+        <hr>
+        #include < iostream >
+          using namespace std;
+          
+          int main() {
+            for (int i = 0; i < 10; i++) {
+              if (i == 4) {
+                break;
+              }
+              cout << i << "\n";
+            } 
+            return 0;
+          }
+          output:0
+          1
+          2
+          3
+          <hr>
+C++ Continue
+The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.
+
+This example skips the value of 4: 
+
+
+#include < iostream >
+  using namespace std;
+  
+  int main() {
+    for (int i = 0; i < 10; i++) {
+      if (i == 4) {
+        continue;
+      }
+      cout << i << "\n";
+    }   
+    return 0;
+  }
+  output:0
+  1
+  2
+  3
+  5
+  6
+  7
+  8
+  9
+  
+  <hr>
+
+  Break and Continue in While Loop
+You can also use break and continue in while loops:
+
+<mark>Break Example:</mark>
+#include < iostream >
+  using namespace std;
+  
+  int main() {
+    int i = 0;
+    while (i < 10) {
+      cout << i << "\n";
+      i++;
+      if (i == 4) {
+        break;
+      }
+    } 
+    return 0;
+  }
+  output:0
+  1
+  2
+  3
+
+  <hr>
+ 
+  <mark>Continue Example:</mark>
+  #include < iostream >
+    using namespace std;
+    
+    int main() {
+      int i = 0;
+      while (i < 10) {
+        if (i == 4) {
+          i++;
+          continue;
+        }
+        cout << i << "\n";
+        i++;
+      } 
+      return 0;
+    }
+  output: 0
+          1
+          2
+          3
+          5
+          6
+          7
+          8
+          9
+          <hr>
+      </pre>
+      <h1>C++ Arrays:</h1>
+      <div><p>
+C++ Arrays<br>
+Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.<br>
+<br>
+To declare an array, define the variable type, specify the name of the array followed by square brackets and specify the number of elements it should store:<br>
+<br>
+string cars[4];<br>
+We have now declared a variable that holds an array of four strings. To insert values to it, we can use an array literal -<br>
+place the values in a comma-separated list, inside curly braces:<br>
+<br>
+string cars[4] = {"Volvo", "BMW", "Ford", "Mazda"};<br>
+To create an array of three integers, you could write:<br>
+<br>
+int myNum[3] = {10, 20, 30};<br>
+      </p></div>
+      <hr>
+      <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+        Access the Elements of an Array
+        You access an array element by referring to the index number inside square brackets [].
+        
+        This statement accesses the value of the first element in cars:
+        
+        Example:
+        
+        #include < iostream >
+          #include < string >
+          using namespace std;
+          
+          int main() {
+            string cars[4] = {"Volvo", "BMW", "Ford", "Mazda"};
+            cout << cars[0];
+            return 0;
+          }
+          output: Volvo
+
+          <hr>
+          Change an Array Element
+          To change the value of a specific element, refer to the index number:
+
+          #include < iostream >
+            #include < string >
+            using namespace std;
+            
+            int main() {
+              string cars[4] = {"Volvo", "BMW", "Ford", "Mazda"};
+              cars[0] = "Opel";
+              cout << cars[0];
+              return 0;
+            }
+            output: Opel
+
+            <hr>
+            <mark>C++ Arrays and Loops</mark>
+Loop Through an Array
+You can loop through the array elements with the for loop.
+
+The following example outputs all elements in the cars array:
+
+Example:
+#include < iostream >
+  #include < string >
+  using namespace std;
+  
+  int main() {
+    string cars[5] = {"Volvo", "BMW", "Ford", "Mazda", "Tesla"};
+    for (int i = 0; i < 5; i++) {
+      cout << cars[i] << "\n";
+    }
+    return 0;
+  }
+  output: Volvo
+  BMW
+  Ford
+  Mazda
+  Tesla
+  
+<hr>
+            
+      </pre>
+      <h1>C++ Structures (struct): </h1>
+      <div><p>
+      C++ Structures<br>
+Structures (also called structs) are a way to group several related variables into one place.<br>
+Each variable in the structure is known as a member of the structure.<br>
+<br>
+Unlike an array, a structure can contain many different data types (int, string, bool, etc.).<br>
+<br>
+Create a Structure<br>
+To create a structure, use the struct keyword and declare each of its members inside curly braces.<br>
+<br>
+After the declaration, specify the name of the structure variable (myStructure in the example below):<br>
+<br>
+struct {             // Structure declaration <br>
+  int myNum;         // Member (int variable)<br>
+  string myString;   // Member (string variable)<br>
+} myStructure;       // Structure variable<br>
+
+      </p></div>
+      <hr>
+      <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+        Access Structure Members
+        To access members of a structure, use the dot syntax (.):
+       
+        #include < iostream >
+          #include < string >
+          using namespace std;
+          
+          int main() {
+            struct {
+              int myNum;
+              string myString;
+            } myStructure;
+          
+            myStructure.myNum = 1;
+            myStructure.myString = "Hello World!";
+          
+            cout << myStructure.myNum << "\n";
+            cout << myStructure.myString << "\n";
+            return 0;
+          }
+          output: 1
+          Hello World!
+          
+          <hr>
+One Structure in Multiple Variables
+You can use a comma (,) to use one structure in many variables:
+
+struct {
+  int myNum;
+  string myString;
+} myStruct1, myStruct2, myStruct3; // Multiple structure variables separated with commas
+This example shows how to use a structure in two different variable:
+
+#include < iostream >
+  #include < string >
+  using namespace std;
+  
+  int main() {
+    struct {
+      string brand;
+      string model;
+      int year;
+    } myCar1, myCar2; // We can add variables by separating them with a comma here
+  
+    // Put data into the first structure
+    myCar1.brand = "BMW";
+    myCar1.model = "X5";
+    myCar1.year = 1999;
+  
+    // Put data into the second structure
+    myCar2.brand = "Ford";
+    myCar2.model = "Mustang";
+    myCar2.year = 1969;
+  
+    // Print the structure members
+    cout << myCar1.brand << " " << myCar1.model << " " << myCar1.year << "\n";
+    cout << myCar2.brand << " " << myCar2.model << " " << myCar2.year << "\n";
+    return 0;
+  }
+  output: BMW X5 1999
+  Ford Mustang 1969
+  <hr>
+
+Named Structures
+By giving a name to the structure, you can treat it as a data type. This means that you can create variables with this structure anywhere in the program at any time.
+
+To create a named structure, put the name of the structure right after the struct keyword:
+
+struct myDataType { // This structure is named "myDataType"
+  int myNum;
+  string myString;
+};
+To declare a variable that uses the structure, use the name of the structure as the data type of the variable:
+
+myDataType myVar;
+Example
+Use one structure to represent two cars:
+#include < iostream >
+  #include < string>
+  using namespace std;
+  
+  // Declare a structure named "car"
+  struct car {
+    string brand;
+    string model;
+    int year;
+  };
+  
+  int main() {
+    // Create a car structure and store it in myCar1;
+    car myCar1;
+    myCar1.brand = "BMW";
+    myCar1.model = "X5";
+    myCar1.year = 1999;
+  
+    // Create another car structure and store it in myCar2;
+    car myCar2;
+    myCar2.brand = "Ford";
+    myCar2.model = "Mustang";
+    myCar2.year = 1969;
+   
+    // Print the structure members
+    cout << myCar1.brand << " " << myCar1.model << " " << myCar1.year << "\n";
+    cout << myCar2.brand << " " << myCar2.model << " " << myCar2.year << "\n";
+   
+    return 0;
+  }
+  output:BMW X5 1999
+  Ford Mustang 1969
+      </pre>
+      <h1>C++ References:</h1>
+      <div><p>
+Creating References<br>
+A reference variable is a "reference" to an existing variable, and it is created with the & operator:<br>
+<br>
+string food = "Pizza";  // food variable<br>
+string &meal = food;    // reference to food<br>
+Now, we can use either the variable name food or the reference name meal to refer to the food variable:<br>
+      </p></div>
+      <hr>
+      <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+        #include < iostream >
+          #include < string >
+          using namespace std;
+          
+          int main() {
+            string food = "Pizza";
+            string &meal = food;
+          
+            cout << food << "\n";
+            cout << meal << "\n";
+            return 0;
+          }
+          output:Pizza
+          Pizza
+          <hr>
+          </pre>
+          <h1>C++ Memory Address:</h1>
+          <div><p>
+Memory Address<br>
+In the example from the previous page, the & operator was used to create a reference variable.<br>
+But it can also be used to get the memory address of a variable;<br>
+which is the location of where the variable is stored on the computer.<br>
+<br>
+When a variable is created in C++, a memory address is assigned to the variable.<br>
+And when we assign a value to the variable, it is stored in this memory address.<br>
+<br>
+To access it, use the & operator, and the result will represent where the variable is stored:<br>
+
+          </p></div>
+          <hr>
+          <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+            #include < iostream>
+              #include < string >
+              using namespace std;
+              
+              int main() {
+                string food = "Pizza";
+              
+                cout << &food;
+                return 0;
+              }
+              output: 0x6dfed4
+              <hr>
+              </pre>
+              <h1>C++ Pointers:</h1>
+
+              <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+                Creating Pointers
+                You learned from the previous chapter, that we can get the memory address of a variable by using the & operator:
+                
+                #include < iostream>
+                  #include < string >
+                  using namespace std;
+                  
+                  int main() {
+                    string food = "Pizza";
+                  
+                    cout << food << "\n";
+                    cout << &food << "\n";
+                    return 0;
+                  }
+                  output: Pizza
+                  0x6dfed4
+
+                  <hr>
+A pointer however, is a variable that stores the memory address as its value.
+
+A pointer variable points to a data type (like int or string) of the same type, and is created with the * operator.
+The address of the variable you're working with is assigned to the pointer:
+ 
+#include < iostream>
+  #include < string>
+  using namespace std;
+  
+  int main() {
+    string food = "Pizza";  // A string variable
+    string* ptr = &food;  // A pointer variable that stores the address of food
+  
+    // Output the value of food
+    cout << food << "\n";
+  
+    // Output the memory address of food
+    cout << &food << "\n";
+  
+    // Output the memory address of food with the pointer
+    cout << ptr << "\n";
+    return 0;
+  }
+  output:Pizza
+  0x6dfed4
+  0x6dfed4
+  
+  <hr>
+Example explained
+Create a pointer variable with the name ptr, that points to a string variable, by using the asterisk sign * (string* ptr).
+Note that the type of the pointer has to match the type of the variable you're working with.
+
+Use the & operator to store the memory address of the variable called food, and assign it to the pointer.
+
+Now, ptr holds the value of food's memory address.
+              </pre>
+              <hr>
+              <h1>C++ Dereference:</h1>
+              <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+                Get Memory Address and Value
+                In the example from the previous page, we used the pointer variable to get the memory address of a variable (used together with the & reference operator). However, you can also use the pointer to get the value of the variable, by using the * operator (the dereference operator):
+                
+                Example
+                #include < iostream>
+                  #include < string>
+                  using namespace std;
+                  
+                  int main() {
+                    string food = "Pizza";  // Variable declaration
+                    string* ptr = &food;    // Pointer declaration
+                  
+                    // Reference: Output the memory address of food with the pointer
+                    cout << ptr << "\n";
+                  
+                    // Dereference: Output the value of food with the pointer
+                    cout << *ptr << "\n";
+                    return 0;
+                  }
+                  output:0x6dfed4
+                  Pizza
+                  <hr>
+Note that the * sign can be confusing here, as it does two different things in our code:
+
+When used in declaration (string* ptr), it creates a pointer variable.
+When not used in declaration, it act as a dereference operator.
+
+<hr>
+
+<mark>C++ Modify Pointers</mark>
+Modify the Pointer Value
+You can also change the pointer's value. But note that this will also change the value of the original variable:
+
+#include < iostream>
+  #include < string>
+  using namespace std;
+  
+  int main() {
+    string food = "Pizza";
+    string* ptr = &food;
+  
+    // Output the value of food
+    cout << food << "\n";
+  
+    // Output the memory address of food
+    cout << &food << "\n";
+  
+    // Access the memory address of food and output its value
+    cout << *ptr << "\n";
+    
+    // Change the value of the pointer
+    *ptr = "Hamburger";
+    
+    // Output the new value of the pointer
+    cout << *ptr << "\n";
+    
+    // Output the new value of the food variable
+    cout << food << "\n";
+    return 0;
+  }
+  output:Pizza
+  0x6dfed4
+  Pizza
+  Hamburger
+  Hamburger
+
+  <hr>
+                  </pre>
+
+                  <h1>C++ Functions: </h1>
+                  <div><p>
+A function is a block of code which only runs when it is called.<br>
+<br>
+You can pass data, known as parameters, into a function.<br>
+<br>
+Functions are used to perform certain actions, and they are important for reusing code: Define the code once, and use it many times.<br>
+                  </p></div>
+<pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+  Create a Function
+  C++ provides some pre-defined functions, such as main(), which is used to execute code. But you can also create your own functions to perform certain actions.
+  
+  To create (often referred to as declare) a function, specify the name of the function, followed by parentheses ():
+  
+  Syntax
+  void myFunction() {
+    // code to be executed
+  }
+
+  Example Explained
+  myFunction() is the name of the function
+  void means that the function does not have a return value. You will learn more about return values later in the next chapter
+  inside the function (the body), add code that defines what the function should do
+
+<mark>Call a Function </mark>
+Declared functions are not executed immediately. They are "saved for later use", and will be executed later, when they are called.
+
+To call a function, write the function's name followed by two parentheses () and a semicolon ;
+
+In the following example, myFunction() is used to print a text (the action), when it is called:
+
+<hr>
+#include < iostream >
+  using namespace std;
+  
+  void myFunction() {
+    cout << "I just got executed!";
+  }
+  
+  int main() {
+    myFunction();
+    return 0;
+  }
+  output: I just got executed!
+
+  <hr>
+
+  #include < iostream>
+    using namespace std;
+    
+    void myFunction() {
+      cout << "I just got executed!\n";
+    }
+    
+    int main() {
+      myFunction();
+      myFunction();
+      myFunction();
+      return 0;
+    }
+    output: I just got executed!
+    I just got executed!
+    I just got executed!
+
+    <hr>
+
+    <mark>C++ Function Parameters</mark>
+
+Parameters and Arguments
+Information can be passed to functions as a parameter. Parameters act as variables inside the function.
+
+Parameters are specified after the function name, inside the parentheses.
+You can add as many parameters as you want, just separate them with a comma:
+
+Syntax
+void functionName(parameter1, parameter2, parameter3) {
+  // code to be executed
+}
+The following example has a function that takes a string called fname as parameter. When the function is called,
+we pass along a first name, which is used inside the function to print the full name:
+
+#include < iostream>
+  #include < string>
+  using namespace std;
+  
+  void myFunction(string fname) {
+    cout << fname << " Refsnes\n";
+  }
+  
+  int main() {
+    myFunction("Liam");
+    myFunction("Jenny");
+    myFunction("Anja");
+    return 0;
+  }
+  output :Liam Refsnes
+  Jenny Refsnes
+  Anja Refsnes
+
+  <hr>
+  <mark>C++ Default Parameters</mark>
+
+  Default Parameter Value
+  You can also use a default parameter value, by using the equals sign (=).
+  
+  If we call the function without an argument, it uses the default value ("Norway"):
+  
+  Example
+  #include < iostream>
+    #include < string>
+    using namespace std;
+    
+    void myFunction(string country = "Norway") {
+      cout << country << "\n";
+    }
+    
+    int main() {
+      myFunction("Sweden");
+      myFunction("India");
+      myFunction();
+      myFunction("USA");
+      return 0;
+    }
+    output:Sweden
+    India
+    Norway
+    USA
+    <hr>
+  </pre>
+ <h1>C++ Function Overloading</h1>
+ <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+  Function Overloading
+  With function overloading, multiple functions can have the same name with different parameters:
+  
+  Example
+  int myFunction(int x)
+  float myFunction(float x)
+  double myFunction(double x, double y)
+  Consider the following example, which have two functions that add numbers of different type:
+  
+  Example:
+    #include < iostream>
+    using namespace std;
+    
+    int plusFuncInt(int x, int y) {
+      return x + y;
+    }
+    
+    double plusFuncDouble(double x, double y) {
+      return x + y;
+    }
+    
+    int main() {
+      int myNum1 = plusFuncInt(8, 5);
+      double myNum2 = plusFuncDouble(4.3, 6.26);
+      cout << "Int: " << myNum1 << "\n";
+      cout << "Double: " << myNum2;
+      return 0;
+    }
+  output:Int: 13
+  Double: 10.56
+
+<hr>
+
+Instead of defining two functions that should do the same thing, it is better to overload one.
+
+In the example below, we overload the plusFunc function to work for both int and double:
+
+Example:
+#include < iostream>
+  using namespace std;
+  
+  int plusFunc(int x, int y) {
+    return x + y;
+  }
+  
+  double plusFunc(double x, double y) {
+    return x + y;
+  }
+  
+  int main() {
+    int myNum1 = plusFunc(8, 5);
+    double myNum2 = plusFunc(4.3, 6.26);
+    cout << "Int: " << myNum1 << "\n";
+    cout << "Double: " << myNum2;
+    return 0;
+  }
+  output:Int: 13
+  Double: 10.56
+
+  <hr>
+</pre>
+<h1>C++ Recursion</h1>
+<div><p>
+Recursion<br>
+Recursion is the technique of making a function call itself.<br>
+This technique provides a way to break complicated problems down into simple problems which are easier to solve.<br>
+<br>
+Recursion may be a bit difficult to understand. The best way to figure out how it works is to experiment with it.<br>
+</p></div>
+<pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+  Recursion Example
+  Adding two numbers together is easy to do, but adding a range of numbers is more complicated. In the following example, recursion is used to add a range of numbers together by breaking it down into the simple task of adding two numbers:
+  
+  Example:
+  #include < iostream>
+    using namespace std;
+    
+    int sum(int k) {
+      if (k > 0) {
+        return k + sum(k - 1);
+      } else {
+        return 0;
+      }
+    }
+    
+    int main() {
+      int result = sum(10);
+      cout << result;
+      return 0;
+    }
+    output:55
+    <hr>
+    </pre>
+
+    <h2 style="font-size: 400%;">C++ OOPS</h2>
+    <h1>C++ What is OOP?</h1>
+    <div><p>
+OOP stands for Object-Oriented Programming.<br>
+<br>
+Procedural programming is about writing procedures or functions that perform operations on the data,<br>
+while object-oriented programming is about creating objects that contain both data and functions.<br>
+<br>
+Object-oriented programming has several advantages over procedural programming:<br>
+<br>
+OOP is faster and easier to execute<br>
+OOP provides a clear structure for the programs<br>
+OOP helps to keep the C++ code DRY "Don't Repeat Yourself", and makes the code easier to maintain, modify and debug<br>
+OOP makes it possible to create full reusable applications with less code and shorter development time<br>
+Tip: The "Don't Repeat Yourself" (DRY) principle is about reducing the repetition of code.<br>
+You should extract out the codes that are common for the application, and place them at a single place and reuse them instead of repeating it.<br>
+    </p></div>
+<h1>C++ Classes and Objects</h1>
+<div><p>
+C++ Classes/Objects<br>
+C++ is an object-oriented programming language.<br>
+<br>
+Everything in C++ is associated with classes and objects, along with its attributes and methods.<br>
+For example: in real life, a car is an object. The car has attributes, such as weight and color, and methods, such as drive and brake.<br>
+<br>
+Attributes and methods are basically variables and functions that belongs to the class. These are often referred to as "class members".<br>
+<br>
+A class is a user-defined data type that we can use in our program, and it works as an object constructor, or a "blueprint" for creating objects.<br>
+</p></div>
+<pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+  Create a Class
+  To create a class, use the class keyword:
+  
+  Example
+  Create a class called "MyClass":
+  
+  class MyClass {       // The class
+    public:             // Access specifier
+      int myNum;        // Attribute (int variable)
+      string myString;  // Attribute (string variable)
+  };
+  Example explained
+  The class keyword is used to create a class called MyClass.
+  The public keyword is an access specifier, which specifies that members (attributes and methods) of the class are accessible from outside the class. You will learn more about access specifiers later.
+  Inside the class, there is an integer variable myNum and a string variable myString. When variables are declared within a class, they are called attributes.
+  At last, end the class definition with a semicolon ;.
+
+  <hr>
+Create an Object
+In C++, an object is created from a class. We have already created the class named MyClass, so now we can use this to create objects.
+
+To create an object of MyClass, specify the class name, followed by the object name.
+
+To access the class attributes (myNum and myString), use the dot syntax (.) on the object:
+
+Example
+Create an object called "myObj" and access the attributes:
+
+#include < iostream>
+  #include  < string>
+  using namespace std;
+  
+  class MyClass {       // The class
+    public:             // Access specifier
+      int myNum;        // Attribute (int variable)
+      string myString;  // Attribute (string variable)
+  };
+  
+  int main() {
+    MyClass myObj;  // Create an object of MyClass
+  
+    // Access attributes and set values
+    myObj.myNum = 15;
+    myObj.myString = "Some text";
+  
+    // Print values
+    cout << myObj.myNum << "\n"; 
+    cout << myObj.myString; 
+    return 0;
+  }
+  output: 15
+  Some text
+
+  <hr>
+</pre>
+<h1>C++ Class Methods</h1>
+<div><p>
+Class Methods<br>
+Methods are functions that belongs to the class.<br>
+<br>
+There are two ways to define functions that belongs to a class:<br>
+<br>
+Inside class definition<br>
+Outside class definition<br>
+In the following example, we define a function inside the class, and we name it "myMethod".<br>
+<br>
+Note: You access methods just like you access attributes; by creating an object of the class and using the dot syntax (.):<br>
+</p></div>
+<hr>
+<pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+#include < iostream>
+  using namespace std;
+  
+  class MyClass {         // The class
+    public:               // Access specifier
+      void myMethod() {   // Method/function
+        cout << "Hello World!";
+      }
+  };
+  
+  int main() {
+    MyClass myObj;     // Create an object of MyClass
+    myObj.myMethod();  // Call the method
+    return 0;
+  }
+  output: Hello World!
+  <hr>
+
+  To define a function outside the class definition, you have to declare it inside the class and then define it outside of the class.
+  This is done by specifiying the name of the class, followed the scope resolution :: operator, followed by the name of the function:
+
+  #include < iostream>
+    using namespace std;
+    
+    class MyClass {         // The class
+      public:               // Access specifier
+        void myMethod();    // Method/function declaration
+    };
+    
+    // Method/function definition outside the class
+    void MyClass::myMethod() {
+      cout << "Hello World!";
+    }
+    
+    int main() {
+      MyClass myObj;     // Create an object of MyClass
+      myObj.myMethod();  // Call the method
+      return 0;
+    }
+    output: Hello Workd!
+
+    <hr>
+  </pre>
+  <h1>C++ Constructors  </h1>
+  <div><p>
+Constructors<br>
+A constructor in C++ is a special method that is automatically called when an object of a class is created.<br>
+
+To create a constructor, use the same name as the class, followed by parentheses ():<br>
+
+  </p></div>
+<hr>
+<pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+  #include < iostream>
+    using namespace std;
+    
+    class MyClass {     // The class
+      public:           // Access specifier
+        MyClass() {     // Constructor
+          cout << "Hello World!";
+        }
+    };
+    
+    int main() {
+      MyClass myObj;    // Create an object of MyClass (this will call the constructor)
+      return 0;
+    }
+    output:Hello World!
+    <hr>
+
+Constructor Parameters
+Constructors can also take parameters (just like regular functions), which can be useful for setting initial values for attributes.
+
+The following class have brand, model and year attributes, and a constructor with different parameters.
+Inside the constructor we set the attributes equal to the constructor parameters (brand=x, etc).
+When we call the constructor (by creating an object of the class), we pass parameters to the constructor,
+which will set the value of the corresponding attributes to the same:
+
+Example:
+#include < iostream>
+  using namespace std;
+  
+  class Car {        // The class
+    public:          // Access specifier
+      string brand;  // Attribute
+      string model;  // Attribute
+      int year;      // Attribute
+      Car(string x, string y, int z) {  // Constructor with parameters
+        brand = x;
+        model = y;
+        year = z;
+      }
+  };
+  
+  int main() {
+    // Create Car objects and call the constructor with different values
+    Car carObj1("BMW", "X5", 1999);
+    Car carObj2("Ford", "Mustang", 1969);
+  
+    // Print values
+    cout << carObj1.brand << " " << carObj1.model << " " << carObj1.year << "\n";
+    cout << carObj2.brand << " " << carObj2.model << " " << carObj2.year << "\n";
+    return 0;
+  }
+  output:BMW X5 1999
+  Ford Mustang 1969
+
+  <hr>
+  Just like functions, constructors can also be defined outside the class. First, declare the constructor inside the class, and
+   then define it outside of the class by specifying the name of the class,
+  followed by the scope resolution :: operator, followed by the name of the constructor (which is the same as the class):
+
+  #include < iostream>
+    using namespace std;
+    
+    class Car {        // The class
+      public:          // Access specifier
+        string brand;  // Attribute
+        string model;  // Attribute
+        int year;      // Attribute
+        Car(string x, string y, int z); // Constructor declaration
+    };
+    
+    // Constructor definition outside the class
+    Car::Car(string x, string y, int z) {
+      brand = x;
+      model = y;
+      year = z;
+    }
+    
+    int main() {
+      // Create Car objects and call the constructor with different values
+      Car carObj1("BMW", "X5", 1999);
+      Car carObj2("Ford", "Mustang", 1969);
+    
+      // Print values
+      cout << carObj1.brand << " " << carObj1.model << " " << carObj1.year << "\n";
+      cout << carObj2.brand << " " << carObj2.model << " " << carObj2.year << "\n";
+      return 0;
+    }
+    output:BMW X5 1999
+    Ford Mustang 1969
+  <hr>
+    </pre>  
+<h1>C++ Access Specifiers</h1>
+<pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+  Access Specifiers
+  By now, you are quite familiar with the public keyword that appears in all of our class examples:
+
+  The public keyword is an access specifier. Access specifiers define how the members (attributes and methods) of a class can be accessed. In the example above, the members are public - which means that they can be accessed and modified from outside the code.
+
+  However, what if we want members to be private and hidden from the outside world?
+  
+  In C++, there are three access specifiers:
+  
+  <mark>public</mark>- members are accessible from outside the class
+  <mark>private</mark> - members cannot be accessed (or viewed) from outside the class
+  <mark>protected</mark> - members cannot be accessed from outside the class, however, they can be accessed in inherited classes.
+  You will learn more about Inheritance later.
+  In the following example, we demonstrate the differences between public and private members:
+
+  Example:
+  #include < iostream>
+    using namespace std;
+    
+    class MyClass {
+      public:    // Public access specifier
+        int x;   // Public attribute
+      private:   // Private access specifier
+        int y;   // Private attribute
+    };
+    
+    int main() {
+      MyClass myObj;
+      myObj.x = 25;  // Allowed (x is public)
+      myObj.y = 50;  // Not allowed (y is private)
+      return 0;
+    }
+    output:In function 'int main()':
+    Line 8: error: 'int MyClass::y' is private
+    Line 14: error: within this context
+
+    <hr>
+Note: It is possible to access private members of a class using a public method inside the same class. See the next chapter (Encapsulation) on how to do this.
+
+Tip: It is considered good practice to declare your class attributes as private (as often as you can).
+This will reduce the possibility of yourself (or others) to mess up the code. This is also the main ingredient of the Encapsulation concept,
+which you will learn more about in the next chapter.
+
+Note: By default, all members of a class are private if you don't specify an access specifier:
+Example
+class MyClass {
+  int x;   // Private attribute
+  int y;   // Private attribute
+};
+</pre>
+<h1>C++ Encapsulation</h1>
+<div><p>
+  Encapsulation
+The meaning of Encapsulation, is to make sure that "sensitive" data is hidden from users.<br>
+To achieve this, you must declare class variables/attributes as private (cannot be accessed from outside the class).<br>
+If you want others to read or modify the value of a private member, you can provide public get and set methods.<br>
+</p></div>
+<pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+  Access Private Members
+  To access a private attribute, use public "get" and "set" methods:
+  
+  Example:
+  #include < iostream>
+    using namespace std;
+    
+    class Employee {
+      private:
+        int salary;
+    
+      public:
+        void setSalary(int s) {
+          salary = s;
+        }
+        int getSalary() {
+          return salary;
+        }
+    };
+    
+    int main() {
+      Employee myObj;
+      myObj.setSalary(50000);
+      cout << myObj.getSalary();
+      return 0;
+    }
+    output: 50000
+<hr>
+Example explained
+The salary attribute is private, which have restricted access.
+
+The public setSalary() method takes a parameter (s) and assigns it to the salary attribute (salary = s).
+
+The public getSalary() method returns the value of the private salary attribute.
+
+Inside main(), we create an object of the Employee class. Now we can use the setSalary() method to set the value of the private attribute to 50000.
+Then we call the getSalary() method on the object to return the value.
+
+Why Encapsulation?
+It is considered good practice to declare your class attributes as private (as often as you can). Encapsulation ensures better control of your data,
+because you (or others) can change one part of the code without affecting other parts
+Increased security of data
+
+    </pre>
+    <h1>C++ Inheritance:</h1>
+    <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+      Inheritance
+      In C++, it is possible to inherit attributes and methods from one class to another. We group the "inheritance concept" into two categories:
+      
+      derived class (child) - the class that inherits from another class
+      base class (parent) - the class being inherited from
+      To inherit from a class, use the : symbol.
+      
+      In the example below, the Car class (child) inherits the attributes and methods from the Vehicle class (parent):
+    
+      #include < iostream>
+        #include < string>
+        using namespace std;
+        
+        // Base class
+        class Vehicle {
+          public: 
+            string brand = "Ford";
+            void honk() {
+              cout << "Tuut, tuut! \n" ;
+            }
+        };
+        
+        // Derived class
+        class Car: public Vehicle {
+          public: 
+            string model = "Mustang";
+        };
+        
+        int main() {
+          Car myCar;
+          myCar.honk();
+          cout << myCar.brand + " " + myCar.model;
+          return 0;
+        }
+        output:Tuut, tuut!
+        Ford Mustang
+
+        <hr>
+        <mark>C++ Multilevel Inheritance</mark>
+Multilevel Inheritance
+A class can also be derived from one class, which is already derived from another class.
+
+In the following example, MyGrandChild is derived from class MyChild (which is derived from MyClass).
+
+#include < iostream>
+  using namespace std;
+  
+  // Parent class
+  class MyClass {
+    public: 
+      void myFunction() {
+        cout << "Some content in parent class." ;
+      }
+  };
+  
+  // Child class
+  class MyChild: public MyClass {
+  };
+  
+  // Grandchild class 
+  class MyGrandChild: public MyChild {
+  };
+  
+  int main() {
+    MyGrandChild myObj;
+    myObj.myFunction();
+    return 0;
+  }
+  output:Some content in parent class.
+
+  <hr>
+  <mark>C++ Multiple Inheritance</mark>
+  Multiple Inheritance
+  A class can also be derived from more than one base class, using a comma-separated list:
+  
+  Example:
+  #include < iostream>
+    using namespace std;
+    
+    // Base class
+    class MyClass {
+      public:
+        void myFunction() {
+          cout << "Some content in parent class.\n" ;
+        }
+    };
+    
+    // Another base class
+    class MyOtherClass {
+      public:
+        void myOtherFunction() {
+          cout << "Some content in another class.\n" ;
+        }
+    };
+    
+    // Derived class
+    class MyChildClass: public MyClass, public MyOtherClass {
+    };
+    
+    int main() {
+      MyChildClass myObj;
+      myObj.myFunction();
+      myObj.myOtherFunction();
+      return 0;
+    }
+    output:Some content in parent class.
+    Some content in another class.
+
+    <hr>
+    <mark>C++ Inheritance Access</mark>
+Access Specifiers
+You learned from the Access Specifiers chapter that there are three specifiers available in C++.
+Until now, we have only used public (members of a class are accessible from outside the class) and private (members can only be accessed within the class).
+The third specifier, protected, is similar to private, but it can also be accessed in the inherited class:
+
+Example:
+#include < iostream>
+  using namespace std;
+  
+  // Base class
+  class Employee  {
+    protected:  // Protected access specifier
+      int salary;
+  };
+  
+  // Derived class
+  class Programmer: public Employee {
+    public:
+      int bonus;
+      void setSalary(int s) {
+        salary = s;
+      }
+      int getSalary() {
+        return salary;
+      }
+  };
+  
+  int main() {
+    Programmer myObj;
+    myObj.setSalary(50000);
+    myObj.bonus = 15000;
+    cout << "Salary: " << myObj.getSalary() << "\n";
+    cout << "Bonus: " << myObj.bonus << "\n";
+    return 0;
+  }
+  output- Salary: 50000
+  Bonus: 15000
+    
+  <hr>
+        </pre>
+        <h1>C++ Polymorphism:</h1>
+        <div><p>
+Polymorphism<br>
+Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance.<br>
+<br>
+Like we specified in the previous chapter; Inheritance lets us inherit attributes and methods from another class.<br>
+Polymorphism uses those methods to perform different tasks. This allows us to perform a single action in different ways.<br>
+<br>
+For example, think of a base class called Animal that has a method called animalSound().<br>
+Derived classes of Animals could be Pigs, Cats, Dogs, Birds - And they also have their own implementation of an animal sound (the pig oinks, and the cat meows, etc.):
+
+        </p></div>
+        <hr>
+        <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+          Example
+          // Base class
+          class Animal {
+            public:
+              void animalSound() {
+                cout << "The animal makes a sound \n";
+              }
+          };
+          
+          // Derived class
+          class Pig : public Animal {
+            public:
+              void animalSound() {
+                cout << "The pig says: wee wee \n";
+              }
+          };
+          
+          // Derived class
+          class Dog : public Animal {
+            public:
+              void animalSound() {
+                cout << "The dog says: bow wow \n";
+              }
+          };
+          Remember from the Inheritance chapter that we use the : symbol to inherit from a class.
+
+          Now we can create Pig and Dog objects and override the animalSound() method:
+        <hr>
+        Example:
+          #include < iostream>
+            #include < string>
+            using namespace std;
+            
+            // Base class
+            class Animal {
+              public:
+                void animalSound() {
+                  cout << "The animal makes a sound \n";
+                }
+            };
+            
+            // Derived class
+            class Pig : public Animal {
+              public:
+                void animalSound() {
+                  cout << "The pig says: wee wee \n";
+                }
+            };
+            
+            // Derived class
+            class Dog : public Animal {
+              public:
+                void animalSound() {
+                  cout << "The dog says: bow wow \n";
+                }
+            };
+            
+            int main() {
+              Animal myAnimal;
+              Pig myPig;
+              Dog myDog;
+            
+              myAnimal.animalSound();
+              myPig.animalSound();
+              myDog.animalSound();
+              return 0;
+            }
+            output:The animal makes a sound
+            The pig says: wee wee
+            The dog says: bow wow
+            <hr>
+            </pre>
+            <h1>C++ Files:</h1>
+            <pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+              C++ Files
+The fstream library allows us to work with files.
+
+To use the fstream library, include both the standard <iostream> AND the <fstream> header file:
+
+Example
+#include < iostream>
+#include < fstream>
+There are three classes included in the fstream library, which are used to create, write or read files:
+
+Class	Description
+ofstream	Creates and writes to files
+ifstream	Reads from files
+fstream	A combination of ofstream and ifstream: creates, reads, and writes to files
+Create and Write To a File
+To create a file, use either the ofstream or fstream class, and specify the name of the file.
+
+To write to the file, use the insertion operator (<<).
+
+Example
+#include < iostream>
+#include < fstream>
+using namespace std;
+
+int main() {
+  // Create and open a text file
+  ofstream MyFile("filename.txt");
+
+  // Write to the file
+  MyFile << "Files can be tricky, but it is fun enough!";
+
+  // Close the file
+  MyFile.close();
+}
+
+
+Why do we close the file?
+It is considered good practice, and it can clean up unnecessary memory space.
+<hr>
+</pre>
+<h1>C++ Exceptions:</h1>
+<pre style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+  C++ Exceptions
+When executing C++ code, different errors can occur: coding errors made by the programmer, errors due to wrong input, or other unforeseeable things.
+
+When an error occurs, C++ will normally stop and generate an error message. The technical term for this is: C++ will throw an exception (throw an error).
+
+C++ try and catch
+Exception handling in C++ consist of three keywords: try, throw and catch:
+
+The try statement allows you to define a block of code to be tested for errors while it is being executed.
+
+The throw keyword throws an exception when a problem is detected, which lets us create a custom error.
+
+The catch statement allows you to define a block of code to be executed, if an error occurs in the try block.
+
+The try and catch keywords come in pairs:
+
+Example
+try {
+  // Block of code to try
+  throw exception; // Throw an exception when a problem arise
+}
+catch () {
+  // Block of code to handle errors
+}
+Consider the following example:
+
+Example:
+#include < iostream>
+  using namespace std;
+  
+  int main() {
+    try {
+      int age = 15;
+      if (age >= 18) {
+        cout << "Access granted - you are old enough.";
+      } else {
+        throw (age);
+      }
+    }
+    catch (int myNum) {
+      cout << "Access denied - You must be at least 18 years old.\n";
+      cout << "Age is: " << myNum;  
+    }
+    return 0;
+  }
+  output:Access denied - You must be at least 18 years old.
+  Age is: 15
+
+  <hr>
+  Example explained
+We use the try block to test some code: If the age variable is less than 18, we will throw an exception, and handle it in our catch block.
+
+In the catch block, we catch the error and do something about it. The catch statement takes a parameter: 
+in our example we use an int variable (myNum) (because we are throwing an exception of int type in the try block (age)), to output the value of age.
+
+If no error occurs (e.g. if age is 20 instead of 15, meaning it will be be greater than 18), the catch block is skipped:
+<hr>
+You can also use the throw keyword to output a reference number, like a custom error number/code for organizing purposes:
+
+Example:
+#include < iostream>
+  using namespace std;
+  
+  int main() {
+    try {
+      int age = 15;
+      if (age >= 18) {
+        cout << "Access granted - you are old enough.";
+      } else {
+        throw 505;
+      }
+    }
+    catch (int myNum) {
+      cout << "Access denied - You must be at least 18 years old.\n";
+      cout << "Error number: " << myNum;  
+    }
+    return 0;
+  }
+  output:Access denied - You must be at least 18 years old.
+  Error number: 505
+  <hr>
+Handle Any Type of Exceptions (...)
+If you do not know the throw type used in the try block, you can use the "three dots" syntax (...) inside the catch block, which will handle any type of exception:
+<hr>
+#include < iostream>
+  using namespace std;
+  
+  int main() {
+    try {
+      int age = 15;
+      if (age >= 18) {
+        cout << "Access granted - you are old enough.";
+      } else {
+        throw 505;
+      }
+    }
+    catch (...) {
+      cout << "Access denied - You must be at least 18 years old.\n";
+    }
+    return 0;
+  }
+  output :Access denied - You must be at least 18 years old.
+
+  <hr>
+</pre>
+<h1>Top 7 C++ Project Ideas for Beginners!</h1>
+<p style="font-size: larger;">
+  1. Employee Management System<br>
+  2. Trading Software<br>
+  3. Security Systems<br>
+  4. Tic-Tac-Toe<br>
+  5. Hospital Management System<br>
+  6. Billing System <br>
+  7. GPA Calculator<br>
+  <hr>
+
+</p>
+<button onclick="window.print()">Print this page</button>
+<br>
+<hr>
+<p2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> Web-Developer : Shantanu Shinde<br>
+   Course Outcome: Student or working Professional will have a good Knowledge of c++ programming and will be able to work in new projects<br>
+   and can create project by ther own.<br>
+   The main Objective behind this is Student will get Quality Education in free of cost.<br>
+   </p2>
+   <hr>
+  </body>
+</html>
